@@ -84,6 +84,11 @@ sentry 支持的客户端还是很多的，这里列出来了：[https://sentry.
 ![](assets/sentry-2025-10-01_14-00-09.png)
 
 
+##  一些资料
+
+1、[https://zhuanlan.zhihu.com/p/210765546](https://zhuanlan.zhihu.com/p/210765546)
+
+
 
 
 
