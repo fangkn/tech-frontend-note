@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* 容器基础样式 */
+    .flex-container {
+      width: 400px;
+      height: 300px;
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid #333;
+      display: flex; /* 启用 Flexbox */
+    }
+
+    /* 子项样式（盒子） */
+    .flex-item {
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+    }
+
+        /* 子项样式（盒子） */
+    .flex-item2 {
+      width: 60px;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+    }
+
+    /* 四个子项分别设置不同颜色便于区分 */
+    .item1 { background: #f44336; }
+    .item2 { background: #2196f3; }
+    .item3 { background: #4caf50; }
+    .item4 { background: #ff9800; }
+    .item5 { background: #9c27b0; }
+    .item6 { background: #795548; }
+    .item7 { background: #607d8b; }
+    .item8 { background: #ffeb3b; }
+    .item9 { background: #8bc34a; }
+
+    /* 标题样式 */
+    h3 { margin: 10px 0 5px 20px; color: #555; }
+    h4 { margin: 10px 0 5px 20px; color: #555; }
+  </style>
+</head>
+<body>
+  <!-- 1. flex-direction: row（默认） -->
+  <h3>flex-direction: row（主轴水平，从左到右）</h3>
+  <div class="flex-container" style="flex-direction: row;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <!-- 2. flex-direction: row-reverse -->
+  <h3>flex-direction: row-reverse（主轴水平，从右到左）</h3>
+  <div class="flex-container" style="flex-direction: row-reverse;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <!-- 3. flex-direction: column -->
+  <h3>flex-direction: column（主轴垂直，从上到下）</h3>
+  <div class="flex-container" style="flex-direction: column;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <!-- 4. flex-direction: column-reverse -->
+  <h3>flex-direction: column-reverse（主轴垂直，从下到上）</h3>
+  <div class="flex-container" style="flex-direction: column-reverse;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+
+  <h3>flex-wrap: nowrap（不换行，项目会压缩到容器宽度）</h3>
+  <div class="flex-container" style="flex-wrap: nowrap;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+    <div class="flex-item item6">6</div>
+    <div class="flex-item item7">7</div>
+    <div class="flex-item item8">8</div>
+    <div class="flex-item item9">9</div>
+  </div>
+
+  <h3>flex-wrap: wrap（换行，项目会换行显示）</h3>
+  <div class="flex-container" style="flex-wrap: wrap;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+    <div class="flex-item item6">6</div>
+    <div class="flex-item item7">7</div>
+    <div class="flex-item item8">8</div>
+    <div class="flex-item item9">9</div>
+  </div>
+
+  <h3>flex-wrap: wrap-reverse（换行，项目会从下到上换行显示）</h3>
+  <div class="flex-container" style="flex-wrap: wrap-reverse;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+    <div class="flex-item item6">6</div>
+    <div class="flex-item item7">7</div>
+    <div class="flex-item item8">8</div>
+    <div class="flex-item item9">9</div>
+  </div>
+
+  <h3>justify-content: flex-start（默认） 靠主轴起点对齐）</h3>
+  <div class="flex-container" style="flex-direction: row; justify-content: flex-start;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+    <div class="flex-item item6">6</div>
+    <div class="flex-item item7">7</div>
+    <div class="flex-item item8">8</div>
+    <div class="flex-item item9">9</div>
+  </div>
+
+  <h3>justify-content: flex-end 靠主轴终点对齐）</h3>
+  <div class="flex-container" style="flex-direction: row; justify-content: flex-end;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <h3>justify-content: center 居中对齐）</h3>
+  <div class="flex-container" style="flex-direction: row; justify-content: center;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <h3>justify-content: space-between 两端对齐，子项间距平均分布）</h3>
+  <div class="flex-container" style="flex-direction: row; justify-content: space-between;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <h3>justify-content: space-around 子项两侧间距相等（中间大，两边小）</h3>
+  <div class="flex-container" style="flex-direction: row; justify-content: space-around;">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+  </div>
+
+  <h3>align-items:stretch 拉伸填满容器</h3>
+  <div class="flex-container" style="flex-direction: row; align-items:stretch;">
+    <div class="flex-item2 item1">1</div>
+    <div class="flex-item2 item2">2</div>
+    <div class="flex-item2 item3">3</div>
+    <div class="flex-item2 item4">4</div>
+  </div>
+
+  <h3>align-items: flex-start  靠交叉轴起点</h3>
+  <div class="flex-container" style="flex-direction: row; align-items: flex-start;">
+    <div class="flex-item2 item1" style="height: 40px;">1</div>
+    <div class="flex-item2 item2" style="height: 80px;">2</div> 
+    <div class="flex-item2 item3" style="height: 120px;">3</div>
+    <div class="flex-item2 item4" style="height: 160px;">4</div>
+  </div>
+
+  <h3>align-items: flex-end  靠交叉轴终点</h3>
+  <div class="flex-container" style="flex-direction: row; align-items: flex-end;">
+    <div class="flex-item2 item1" style="height: 40px;">1</div>
+    <div class="flex-item2 item2" style="height: 80px;">2</div> 
+    <div class="flex-item2 item3" style="height: 120px;">3</div>
+    <div class="flex-item2 item4" style="height: 160px;">4</div>
+  </div>
+
+  <h3>align-items: center  居中对齐</h3>
+  <div class="flex-container" style="flex-direction: row; align-items: center;">
+    <div class="flex-item2 item1" style="height: 40px;">1</div>
+    <div class="flex-item2 item2" style="height: 80px;">2</div> 
+    <div class="flex-item2 item3" style="height: 120px;">3</div>
+    <div class="flex-item2 item4" style="height: 160px;">4</div>
+  </div>
+
+  <h3>align-items: baseline  基线对齐</h3>
+  <div class="flex-container" style="flex-direction: row; align-items: baseline;">
+    <div class="flex-item2 item1" style="height: 40px;">1</div>
+    <div class="flex-item2 item2" style="height: 80px;">2</div> 
+    <div class="flex-item2 item3" style="height: 120px;">3</div>
+    <div class="flex-item2 item4" style="height: 160px;">4</div>
+  </div>
+
+  <h3>基线对齐，再举个例子：</h3>
+  <div class="flex-container" style="flex-direction: row; align-items: baseline;">
+    <div class="flex-item2 item1" style="height: 40px; font-size:16px;">1</div>
+    <div class="flex-item2 item2" style="height: 80px; font-size:24px;">2</div>   
+    <div class="flex-item2 item3" style="height: 120px; font-size:32px;">3</div>
+    <div class="flex-item2 item4" style="height: 160px; font-size:40px;">4</div>
+  </div>
+
+  <h3>多行交叉时对应 align-content: flex-start</h3>
+  <div class="flex-container" style="flex-direction: row; flex-wrap: wrap; align-content: flex-start;">
+    <div class="flex-item item1" >1</div>
+    <div class="flex-item item2" >2</div> 
+    <div class="flex-item item3" >3</div>
+    <div class="flex-item item4" >4</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+  </div>
+
+  <h3>多行交叉时对应 align-content: flex-end</h3>
+  <div class="flex-container" style="flex-direction: row; flex-wrap: wrap; align-content: flex-end;">
+    <div class="flex-item item1" >1</div>
+    <div class="flex-item item2" >2</div> 
+    <div class="flex-item item3" >3</div>
+    <div class="flex-item item4" >4</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+  </div>
+
+  <h3>多行交叉时对应 align-content: center</h3>
+  <div class="flex-container" style="flex-direction: row; flex-wrap: wrap; align-content: center;">
+    <div class="flex-item item1" >1</div>
+    <div class="flex-item item2" >2</div> 
+    <div class="flex-item item3" >3</div>
+    <div class="flex-item item4" >4</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+  </div>
+
+  <h3>多行交叉时对应 align-content: space-between</h3>
+  <div class="flex-container" style="flex-direction: row; flex-wrap: wrap; align-content: space-between;">
+    <div class="flex-item item1" >1</div>
+    <div class="flex-item item2" >2</div> 
+    <div class="flex-item item3" >3</div>
+    <div class="flex-item item4" >4</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+  </div>
+
+  <h3>多行交叉时对应 align-content: space-around</h3>
+  <div class="flex-container" style="flex-direction: row; flex-wrap: wrap; align-content: space-around;">
+    <div class="flex-item item1" >1</div>
+    <div class="flex-item item2" >2</div> 
+    <div class="flex-item item3" >3</div>
+    <div class="flex-item item4" >4</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+    <div class="flex-item item5" >5</div>
+    <div class="flex-item item6" >6</div> 
+    <div class="flex-item item7" >7</div>
+    <div class="flex-item item8" >8</div>
+  </div>
+
+  <h3>Flex 项目属性展示</h3>
+
+  <h4>1. order 属性 - 定义项目排列顺序</h4>
+  <div class="flex-container" style="flex-direction: row;">
+    <div class="flex-item item1" style="order: 3;">1 (order3)</div>
+    <div class="flex-item item2" style="order: 1;">2 (order1)</div> 
+    <div class="flex-item item3" style="order: 4;">3 (order4)</div>
+    <div class="flex-item item4" style="order: 2;">4 (order2)</div>
+  </div>
+  
+
+  <h4>2. flex-bsis 属性 - 定义项目初始大小</h4>
+  <div class="flex-container" style="flex-direction: row;">
+    <div class="flex-item item1" style="flex-basis: 50px;">50px</div>
+    <div class="flex-item item2" style="flex-basis: 100px;">100px</div> 
+    <div class="flex-item item3" style="flex-basis: 150px;">150px</div>
+    <div class="flex-item item4" style="flex-basis: auto;">auto</div>
+  </div>
+  
+
+  <h4>3. flex-grow 属性 - 定义项目放大比例</h4>
+  <div class="flex-container" style="flex-direction: row;">
+    <div class="flex-item item1" style="flex-grow: 1;">1</div>
+    <div class="flex-item item2" style="flex-grow: 2;">2</div> 
+    <div class="flex-item item3" style="flex-grow: 3;">3</div>
+    <div class="flex-item item4" style="flex-grow: 0;">0</div>
+  </div>
+  
+  <!-- flex-shrink 属性展示 -->
+  <h4>4. flex-shrink 属性 - 定义项目缩小比例</h4>
+  <div class="flex-container" style="flex-direction: row; width: 300px;">
+    <div class="flex-item item1" style="flex-basis: 100px; flex-shrink: 1;">1</div>
+    <div class="flex-item item2" style="flex-basis: 100px; flex-shrink: 2;">2</div> 
+    <div class="flex-item item3" style="flex-basis: 100px; flex-shrink: 3;">3</div>
+    <div class="flex-item item4" style="flex-basis: 100px; flex-shrink: 0;">4</div>
+  </div>
+  
+  <!-- flex 简写属性展示 -->
+  <h4>5. flex 简写属性 - flex-grow, flex-shrink, flex-basis 的简写</h4>
+  <div class="flex-container" style="flex-direction: row;">
+    <div class="flex-item item1" style="flex: 1 1 100px;">1</div>
+    <div class="flex-item item2" style="flex: 2 1 auto;">2</div> 
+    <div class="flex-item item3" style="flex: 0 0 150px;">3</div>
+    <div class="flex-item item4" style="flex: initial;">4</div>
+  </div>
+  
+  <!-- align-self 属性展示 -->
+  <h4>6. align-self 属性 - 定义项目在交叉轴上的对齐方式</h4>
+  <div class="flex-container" style="flex-direction: row; height: 150px; align-items: center;">
+    <div class="flex-item item1" style="align-self: flex-start;">1</div>
+    <div class="flex-item item2" style="align-self: center;">2</div> 
+    <div class="flex-item item3" style="align-self: flex-end;">3</div>
+    <div class="flex-item item4" style="align-self: stretch; height: auto;">4</div>
+  </div>
+
+</body>
+</html>
