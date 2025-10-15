@@ -63,11 +63,7 @@ docker load -i tianon-exim4.tar
 docker load -i geoipupdate-v4.7.1.tar
 ```
 
-然后，在包的目录下执行 ./install.sh 就可以了。
-
-这个东西一共要安装 32个 docker image，太多了。
-
-更多的说明，还是要参考官网的安装说明。
+然后，在包的目录下执行 ``./install.sh 就可以了。这个东西一共要安装 32个 docker image，太多了。更多的说明，还是要参考官网的安装说明。
 
 最后 整体的包文件在这里。 
 
